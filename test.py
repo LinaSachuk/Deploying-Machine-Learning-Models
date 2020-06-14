@@ -37,8 +37,23 @@ chart_data = pd.DataFrame(
 
 st.area_chart(chart_data)
 
+
 image = Image.open(
     "sunrise.jpg")
 
 st.image(image, caption='Sunrise by the mountains',
          use_column_width=True)
+
+# # ====================================== Flask testing =========================
+# from flask import Flask
+
+# app = Flask(__name__)
+
+
+# @app.route('/')
+# def home():
+#     return "Welcome to Home"
+
+
+# if __name__ == '_main_':
+#     app.run(debug=True)
