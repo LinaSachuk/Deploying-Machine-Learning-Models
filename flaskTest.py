@@ -24,5 +24,13 @@ def add_param():
     return str(int(a) + int(b))
 
 
+@app.route("/addParamPost", methods=['POST'])
+def add_param_post():
+    a = request.form['a']
+    b = request.form['b']
+
+    return str(int(a) + int(b))
+
+
 if __name__ == '__main__':
     app.run(debug=True)
