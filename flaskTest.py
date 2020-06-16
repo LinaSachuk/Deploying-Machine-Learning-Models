@@ -1,36 +1,40 @@
-# ====================================== Flask testing =========================
-from flask import Flask, request
+# # ====================================== Flask testing =========================
+# from flask import Flask, request
 
-app = Flask(__name__)
-
-
-@app.route('/')
-def home():
-    return "Welcome to Home"
+# app = Flask(__name__)
 
 
-@app.route('/add')
-def add():
-    a = 10
-    b = 90
-    return str(a + b)
+# @app.route('/')
+# def home():
+#     return "Welcome to Home"
 
 
-@app.route("/addParam", methods=['GET'])
-def add_param():
-    a = request.args.get('a')
-    b = request.args.get('b')
-
-    return str(int(a) + int(b))
-
-
-@app.route("/addParamPost", methods=['POST'])
-def add_param_post():
-    a = request.form['a']
-    b = request.form['b']
-
-    return str(int(a) + int(b))
+# @app.route('/add')
+# def add():
+#     a = 10
+#     b = 90
+#     return str(a + b)
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# @app.route("/addParam", methods=['GET'])
+# def add_param():
+#     a = request.args.get('a')
+#     b = request.args.get('b')
+
+#     return str(int(a) + int(b))
+
+
+# @app.route("/addParamPost", methods=['POST'])
+# def add_param_post():
+#     a = request.form['a']
+#     b = request.form['b']
+
+#     return str(int(a) + int(b))
+
+
+# if __name__ == '__main__':
+#     app.run(debug=True)
+from xgboost import XGBClassifier
+import platform
+print(platform.machine())
+print(platform.architecture())
