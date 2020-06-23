@@ -41,5 +41,5 @@ pred = model.predict([[sqft, bath, bed, floor]])[0]
 if st.button("Get House Price"):
 
     formatted_float = "${:,.2f}".format(int(pred))
-    print(formatted_float)
+    # print(formatted_float)
     st.header("Estimated House Price is USD {}".format(formatted_float))
